@@ -1,0 +1,92 @@
+<div>
+    <form [formGroup]="enrollForm" (ngSubmit)="onSubmit()" class="text-center p-5 f-top f-bottom">
+        <div class="form-group">
+            <input type="text" formControlName="fname" maxlength="20" class="form-control" id="firstname"
+                placeholder="First Name" [ngClass]="{ 'is-invalid': submitted && f.fname.errors }">
+            <div *ngIf="submitted && f.fname.errors" class="invalid-feedback">
+                <div *ngIf="f.fname.errors.required">First Name is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="lname" maxlength="20" class="form-control" id="lastname"
+                placeholder="Last Name" [ngClass]="{ 'is-invalid': submitted && f.lname.errors }">
+            <div *ngIf="submitted && f.lname.errors" class="invalid-feedback">
+                <div *ngIf="f.lname.errors.required">Last Name is required</div>
+            </div>
+        </div>
+        <div *ngIf="formType === 'testimonial'">
+            <div class="d-flex justify-content-center">
+                <div class="form-group form-check" style="padding-left: 0;">
+                    <label class="form-check-label" for="flexRadioDefault1" style="margin-right: 10px;">Gender</label>
+                    <input type="radio" name="gender" id="male" value="male"
+                        [ngClass]="{ 'is-invalid': submitted && f.email.errors }" /> M
+                    <input type="radio" name="gender" id="female" value="female" /> F
+                    <div *ngIf="submitted && f.gender.errors" class="invalid-feedback">
+                        <div *ngIf="f.gender.errors.required">Please select a Gender</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="formType === 'enroll' || formType === 'register' || formType === 'contact'">
+            <div class="form-group">
+                <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email"
+                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                    <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="tel" formControlName="phone" maxlength="10" class="form-control" id="phone"
+                    placeholder="Phone" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }"
+                    (keypress)="keyPressNumbers($event)">
+                <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                    <div *ngIf="f.phone.errors.required">Phone is required</div>
+                    <div *ngIf="f.phone.errors.pattern || f.phone.errors.maxlength || f.phone.errors.minlength">
+                        Invalid Phone
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="formType === 'enroll' || formType === 'register'">
+            <div class="form-group">
+                <select class="browser-default custom-select" formControlName="course"
+                    [ngClass]="{ 'is-invalid': submitted && f.course.errors }">
+                    <option value="">Select a course</option>
+                    <option *ngFor="let course of courses;" [ngValue]="course" value="{{course}}">
+                        {{course}}
+                    </option>
+                </select>
+                <div *ngIf="submitted && f.course.errors" class="invalid-feedback">
+                    Please select a course
+                </div>
+            </div>
+        </div>
+        <div *ngIf="formType === 'contact' || formType === 'testimonial'">
+            <div class="form-group">
+                <textarea class="form-control rounded-0" formControlName="msg" maxlength="4000" rows="5" id="msg"
+                    [ngClass]="{ 'is-invalid': submitted && f.msg.errors }"></textarea>
+                <div *ngIf="submitted && f.msg.errors" class="invalid-feedback">
+                    <div *ngIf="f.msg.errors.required">Please enter message</div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="formType === 'enroll'">
+            <div class="modal-footer form-group">
+                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                    (click)="closeClick()">Close</button> -->
+                <button [disabled]="loading" class="btn btn-primary btn-lg btn-block">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Enroll
+                </button>
+            </div>
+        </div>
+        <div *ngIf="formType === 'register' || formType === 'contact' || formType === 'testimonial'">
+            <button [disabled]="loading" class="btn btn-primary btn-lg btn-block">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                Submit
+            </button>
+        </div>
+
+    </form>
+</div>

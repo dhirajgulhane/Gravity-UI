@@ -1,0 +1,22 @@
+[
+    {
+        "question": "When does the next class start?",
+        "answer": "Upcoming classes will be updated periodically on the course section in our website"
+    },
+    {
+        "question": "Do I need to bring a laptop?",
+        "answer": "Yes, please bring your own laptop to class. We prefer a Mac but Windows can be used as well."
+    },
+    {
+        "question": "What is your admissions process?",
+        "answer": "Once you sign up from the website, an admissions counselor will contact you by email to schedule a call. Before you are admitted, we’ll sit down for an informal discussion on what motivates you, education background, work experience and general awareness in the IT field. From our experiences, we found many students who didn’t have any core programming skills to be able to learn and transition into professionals in the field"
+    },
+    {
+        "question": "I do not have a computer science background. Can I still take this course?",
+        "answer": "Our program is designed for those new to software QA automation. You will start from basic test automation concepts to learning key Java programming fundamentals. There will be homework and in-class projects so that you get a chance to apply what you learn and trying things for yourself. Although we do not assume any prior programming knowledge, it would be helpful for you to get a head-start by checking out the Java track on codecademy."
+    },
+    {
+        "question": "Will I get a job after completing this course?",
+        "answer": "Your skills will be in high demand, and you’re future will be bright, but like most things in life, your prospective employment in the QA automation engineering world depends on how hard you work. If you consistently apply throughout the 16-week job marketing program and during your job search, then your chances look really good. You will also need to be well-prepared for your interviews. The good news is that we will be with you every step of the way. We don’t just teach you to code and build project, we also work with you on your resume, help you prepare for interviews, and connect you with job opportunities. We maintain relationships with a vast network of companies in the software development world as well as with our alumni base, which provides our students a variety of potential employment opportunities."
+    }
+]

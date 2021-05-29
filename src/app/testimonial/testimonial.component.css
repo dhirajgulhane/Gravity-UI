@@ -1,0 +1,37 @@
+.container h3{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.gravity-padding{
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+
+  .cm-bottom{
+      margin-bottom: 2%;
+      background-color: black;
+  }
+
+  .only-bottom{
+    margin-bottom: 5%;
+  }
+
+  .t-span{
+    font-size: 25px;
+    margin-left: 10%;
+    font-weight: 500;
+  }
+
+  .t-para{
+    margin-top: 2%;
+    font-size: 20px;
+    font-family: cursive;
+  }
+
+  .h{
+    height: fit-content;
+  }
+

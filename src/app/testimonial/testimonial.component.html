@@ -1,0 +1,53 @@
+<div class="cm-bottom">
+    <div class="container gravity-padding">
+        <h3>Testimonials</h3>
+    </div>
+</div>
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-right" style="margin-bottom: 2%;">
+                <button type="button" class="btn btn-dark btn-lg" data-toggle="modal"
+                    data-backdrop="static" data-keyboard="false" data-target="#testimonialModal" (click)="testimonialClick()">
+                    Write a Testimonial
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div>
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let testimonial of testimonials;" class="col-sm-6 only-bottom h">
+                <img *ngIf="testimonial.gender === 'M'" src="assets/images/man.png" width="20%" height="60%"
+                    alt="joinus">
+                <img *ngIf="testimonial.gender === 'F'" src="assets/images/woman.png" width="20%" height="60%"
+                    alt="joinus">
+                <span class="t-span">{{testimonial.name}}</span>
+                <div>
+                    <p class="t-para">{{testimonial.feedback}}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="testimonialModal" tabindex="-1" role="dialog" aria-labelledby="testimonialModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="testimonialModalLabel">{{ModalTitle}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <app-register [formType]="formType"></app-register>
+            </div>
+        </div>
+    </div>
+</div>

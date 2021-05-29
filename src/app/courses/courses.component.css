@@ -1,0 +1,35 @@
+.container h3{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.gravity-padding{
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+
+  .cm-bottom{
+      margin-bottom: 5%;
+      background-color: black;
+  }
+
+  .only-bottom{
+    padding-bottom: 5%;
+}
+
+.course-img{
+    width: 40%;
+}
+
+.course-p{
+    text-align: center;
+    font-size: 21px;
+    font-weight: 500;
+    margin-top: 2%;
+}
+
+.mar-top{
+    margin-top: 5%;
+}
