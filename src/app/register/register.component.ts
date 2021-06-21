@@ -74,13 +74,21 @@ export class RegisterComponent implements OnInit {
   setTextAreaValidators() {
     const msg = this.enrollForm.get('msg');
     const gender = this.enrollForm.get('gender');
+    const email = this.enrollForm.get('email');
+    const course = this.enrollForm.get('course');
+    const phone = this.enrollForm.get('phone');
     if (this.formType === 'testimonial') {
       msg.setValidators([Validators.required]);
       gender.setValidators([Validators.required]);
+      email.setValidators([Validators.nullValidator]);
+      course.setValidators([Validators.nullValidator]);
+      phone.setValidators([Validators.nullValidator]);
     }
 
     if (this.formType === 'contact') {
       msg.setValidators([Validators.required]);
+      gender.setValidators([Validators.nullValidator]);
+      course.setValidators([Validators.nullValidator]);
     }
     msg.updateValueAndValidity();
   }

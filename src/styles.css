@@ -1,29 +1,15 @@
-.nav-item-decoration{
+.navbar{
+  background-color: #ffffff;
+}
+
+.navbar-light .navbar-nav .nav-link{
   color: #000000;
   font-size: 20px;
-  font-weight: 500;
 }
 
- .a, a:hover, a:focus {
-    background-color: #00bfff;
-    color: white;
-    transition: all .3s ease;
-  }
-
-  .navbar-expand .navbar-nav .nav-link {
-    padding-right: 1.0rem !important;
-    padding-left: 1.0rem !important;
+.navbar-light .navbar-nav .nav-link:hover{
+  text-decoration: underline;
 }
-
-  .container-dec{
-    margin: 15px 0px 0px 105px;
-    min-height: 85px;
-  }
-
-  .navbar-expand{
-    float: right; 
-    padding-top: 20px;
-  }
   
 .footer{
     bottom: 0;
@@ -41,7 +27,8 @@
  }
 
  .copyright{
-   padding-top: 15px;
+   font-weight: 500;
+   font-size: 15px;
  }
 
  .social{
@@ -76,6 +63,14 @@
 .img-brand{
   padding-top: 0rem !important;
   padding-bottom: 0rem !important;
+}
+
+.icon-padding{
+  padding: 20px;
+}
+
+.text-center a{
+  color: #fff;
 }
 
 html, body { height: 100%; }

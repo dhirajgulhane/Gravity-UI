@@ -7,6 +7,15 @@
     font-weight: 600;
 }
 
+.dj-h2{
+  margin-left: 60px;
+}
+
+.man-with-comp-img{
+  height: 500px;
+  width: 100%;
+}
+
 .btn-txt{
     font-weight: 500;
 }
@@ -209,4 +218,76 @@
     height:100vh;
   }
  
+
+  @media screen and (max-width:600px){
+    .dream-job{
+      margin-top: 10%;
+      margin-bottom: 30px;
+      color: #000000;
+      font-size: 35px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 600;
+  }
+
+  .dj-h2{
+    margin-left: 0px;
+    text-align: center;
+    font-size: 35px;
+    color: #3289C7;
+  }
+
+  .man-with-comp-img{
+    height: 350px;
+    width: 100%;
+  }
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+  }
+  
+    .batch{
+      border: 1px solid blue;
+      text-align: center;
+      margin-top: 10%;
+      border-radius: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-family: 'Lato', sans-serif;
+      overflow: hidden;
+      box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+      font-size: 18px;
+      max-width: unset;
+      margin-left: 3%;
+  }
+
+  .wcenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+  
+  }
+
+  .wcenter2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+  
+  }
+
+  .mat-header{
+    height: auto;
+}
+}
 
