@@ -3,8 +3,10 @@
 }
 
 .navbar-light .navbar-nav .nav-link{
-  color: #000000;
-  font-size: 20px;
+  color: #000000 !important;
+  font-size: 22px;
+  font-weight: 500;
+  font-style: oblique;
 }
 
 .navbar-light .navbar-nav .nav-link:hover{
