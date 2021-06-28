@@ -3,6 +3,7 @@
     color: white;
     text-transform: uppercase;
     font-weight: 500;
+    margin-bottom: unset;
 }
 
 .gravity-padding{

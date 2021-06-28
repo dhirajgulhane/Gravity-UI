@@ -1,51 +1,31 @@
 [{
-    "name": "A Gulhane",
-    "feedback": "Good coaching institute in Pune. Got job within 2 months of training. Cheers !!",
+    "name": "Dhiraj G",
+    "feedback": "Good coaching institute in Pune. Got job within 3 months of training. Cheers !!",
+    "gender" : "M"
+},
+{
+    "name": "Vaibhav",
+    "feedback": "I had never thought that I will become software test analyst and get job but Gravity has made it for me. Syllabus is well designed to focus on maximum hands on which helped to gain confidence to crack interviews. Highly recommended if looking to make career in software industry.",
+    "gender" : "M"
+},
+{
+    "name": "Sayali",
+    "feedback": "Learned a lot from Gravity ! Although a fresher, gravity helped me to groom into truely working professional. Experienced industry trainers who guides you right from teaching till placement.",
     "gender" : "F"
 },
 {
-    "name": "ABC",
-    "feedback": "I never expected in my life that I will become a software test automation engineer.SG Software Testing institute made all my dreams come true that I got a job as a QA - software test engineer with package 3.8 LPA.",
+    "name": "Suraj",
+    "feedback": "I was not sure if I had made the right choice by joining the testing course . But Gravity surpassed my expectations. They are truly Best Of best in teaching , the kind of quality you can expect in any top Testing institute . I am glad I made this choice, definitely recommend to people interested in Testing (Manual + Automation) career.",
     "gender" : "M"
 },
 {
-    "name": "XYZ",
-    "feedback": "I have learned a lot from this training. And you really helped to understand all the concepts very well.Thanks again.",
-    "gender" : "M"
-},
-{
-    "name": "S Gulhane",
-    "feedback": "I was not sure if I had made the right choice of joining the testing course . But SG Testing institute surpassed my expectations. They are truly Best Of best in teaching , the kind of quality you can expect in any top Testing institute . I am glad I made this choice, definitely recommend to people interested in Testing(Manual and Automation) career. Dont lose Hope Just join this institute ",
+    "name": "Sneha",
+    "feedback": "I was looking for best corporate training institute in Pune and then came across Gravity corporate training center, now I can say, joining Gravity was one of my best decision as I got my first job within 3 months of training. Best part of this institute I like is practicle exposure to therotical concepts. Experienced industry professionals are always there to guide you throughout course. One to One mentorship is something makes this institute unique.",
     "gender" : "F"
 },
 {
-    "name": "ABC",
-    "feedback": "Upcoming classes will be updated periodically on the course section in our website",
+    "name": "Pankaj G",
+    "feedback": "I was worried about my career as I was jobless but Gravity helped me to overcome this by getting me dream job. I am doing exceptionally well in my professional career and I thank Gravity for this. Got to know industry expectations beforehand through coaching done by industry experienced professionals which helped to crack interviews. Join Gravity today to get your dream job !!",
     "gender" : "M"
-},
-{
-    "name": "XYZ",
-    "feedback": "Upcoming classes will be updated periodically on the course section in our website",
-    "gender" : "M"
-},
-{
-    "name": "D Gulhane",
-    "feedback": "Upcoming classes will be updated periodically on the course section in our website",
-    "gender" : "F"
-},
-{
-    "name": "ABC",
-    "feedback": "Upcoming classes will be updated periodically on the course section in our website",
-    "gender" : "M"
-},
-{
-    "name": "XYZ",
-    "feedback": "Upcoming classes will be updated periodically on the course section in our website",
-    "gender" : "M"
-},
-{
-    "name": "ABC",
-    "feedback": "Upcoming classes will be updated periodically on the course section in our website",
-    "gender" : "F"
 }
 ]

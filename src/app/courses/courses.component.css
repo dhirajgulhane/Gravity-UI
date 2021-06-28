@@ -3,6 +3,7 @@
     color: white;
     text-transform: uppercase;
     font-weight: 500;
+    margin-bottom: unset;
 }
 
 .gravity-padding{
@@ -19,8 +20,16 @@
     padding-bottom: 5%;
 }
 
+.video-bottom{
+    padding-bottom: 3%;
+}
+
 .course-img{
     width: 40%;
+}
+
+.manual-test-img{
+    width: 15%;;
 }
 
 .course-p{
@@ -32,4 +41,24 @@
 
 .mar-top{
     margin-top: 5%;
+}
+
+.elearning{
+    margin-bottom: 2%;
+    color: black;
+}
+
+@media only screen and (max-width: 767px){
+    .manual-test-img{
+        width: 30%;;
+    }
+
+    .elearning{
+        margin-bottom: 5%;
+        color: black;
+    }
+
+    .video-bottom{
+        padding-bottom: 5%;
+    }
 }
