@@ -12,7 +12,8 @@ import { Result } from './model/Result';
 export class SharedService {
 
   readonly APIUrlJSON = "/assets/data/";
-  readonly APIUrl = "http://localhost:8080/angularservice/v1";
+  //readonly APIUrl = "http://localhost:8080/angularservice/v1";
+  readonly APIUrl = "http://gravitybackend.herokuapp.com/angularservice/v1";
 
   constructor(private http: HttpClient) { }
 
