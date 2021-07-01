@@ -248,7 +248,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 94%;
     pointer-events: auto;
     background-color: #fff;
     background-clip: padding-box;
