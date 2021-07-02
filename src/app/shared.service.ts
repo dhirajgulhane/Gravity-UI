@@ -23,7 +23,7 @@ export class SharedService {
   }
 
   getCourses():Observable<String[]>{
-    return this.http.get<any>(this.APIUrl+'/courses');
+    return this.http.get<any>(this.APIUrlJSON+'courses.json');
   }
 
   enrollUser(user: User):Observable<Result>{
