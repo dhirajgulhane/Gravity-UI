@@ -22,7 +22,10 @@ export class CoursesComponent implements OnInit {
 
   onCloseHandled() {
     this.model.display = 'none';
-    this.router.navigate(['/home']);
+    this.router.navigate(['courses'])
+      .then(() => {
+        window.location.reload();
+      });
   }
 
 }

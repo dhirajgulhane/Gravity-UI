@@ -22,7 +22,10 @@ export class ContactComponent implements OnInit {
 
   onCloseHandled() {
     this.model.display = 'none';
-    this.router.navigate(['/home']);
+    this.router.navigate(['contact'])
+      .then(() => {
+        window.location.reload();
+      });
   }
 
 }

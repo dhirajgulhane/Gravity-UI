@@ -1,6 +1,7 @@
 import { Testimonial } from './../model/Testimonial';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { SharedService } from '../shared.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-testimonial',
@@ -17,7 +18,7 @@ export class TestimonialComponent implements OnInit {
   public model = { message: "", display: "none" }
   @ViewChild('closebutton') closebutton;
 
-  constructor(private service: SharedService) { }
+  constructor(private service: SharedService, private router: Router) { }
 
   ngOnInit(): void {
     this.service.getTestimonials().subscribe(data => {
@@ -37,6 +38,10 @@ export class TestimonialComponent implements OnInit {
 
   onCloseHandled() {
     this.model.display = 'none';
+    this.router.navigate(['testimonials'])
+      .then(() => {
+        window.location.reload();
+      });
   }
 
 }
