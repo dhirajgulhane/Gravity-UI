@@ -1,5 +1,5 @@
 import { Testimonial } from './../model/Testimonial';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { SharedService } from '../shared.service';
 
 @Component({
@@ -14,6 +14,8 @@ export class TestimonialComponent implements OnInit {
 
   ModalTitle: String;
   formType = 'testimonial';
+  public model = { message: "", display: "none" }
+  @ViewChild('closebutton') closebutton;
 
   constructor(private service: SharedService) { }
 
@@ -25,6 +27,16 @@ export class TestimonialComponent implements OnInit {
 
   testimonialClick(){
     this.ModalTitle = "Write a Testimonial";
+  }
+
+  getResponseMsg(data) {
+    this.model.message = data.message;
+    this.model.display = data.display;
+    this.closebutton.nativeElement.click();
+  }
+
+  onCloseHandled() {
+    this.model.display = 'none';
   }
 
 }

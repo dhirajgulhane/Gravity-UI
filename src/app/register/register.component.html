@@ -18,9 +18,9 @@
             <div class="d-flex justify-content-center">
                 <div class="form-group form-check" style="padding-left: 0;">
                     <label class="form-check-label" for="flexRadioDefault1" style="margin-right: 10px;">Gender</label>
-                    <input type="radio" formControlName="gender" name="gender" id="male" value="male"
+                    <input type="radio" formControlName="gender" name="gender" id="male" value="M"
                         [ngClass]="{ 'is-invalid': submitted && f.gender.errors }" /> M
-                    <input type="radio" formControlName="gender" name="gender" id="female" value="female" 
+                    <input type="radio" formControlName="gender" name="gender" id="female" value="F" 
                     [ngClass]="{ 'is-invalid': submitted && f.gender.errors }" /> F
                     <div *ngIf="submitted && f.gender.errors" class="invalid-feedback">
                         <div *ngIf="f.gender.errors.required">Please select a Gender</div>

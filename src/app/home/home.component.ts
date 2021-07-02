@@ -3,6 +3,7 @@ import { Faq } from './../model/faq';
 import { SharedService } from './../shared.service';
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -27,13 +28,13 @@ export class HomeComponent implements OnInit {
   formType = 'enroll';
   @ViewChild('closebutton') closebutton;
 
-  constructor(private service: SharedService) { }
+  constructor(private service: SharedService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.service.getFaqs().subscribe(data => {
       this.faqs = data;
     });
-
   }
 
   enrollClick() {
@@ -57,6 +58,7 @@ export class HomeComponent implements OnInit {
 
   onCloseHandled() {
     this.model.display = 'none';
+    this.router.navigate(['/home']);
   }
 
 }

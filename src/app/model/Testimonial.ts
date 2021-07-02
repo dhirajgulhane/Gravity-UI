@@ -1,4 +1,7 @@
 export class Testimonial {
-    name: string;
-    feedback: string;
+    fname: string;
+    lname: string;
+    gender: string;
+    msg: string;
+    approved: string;
 }

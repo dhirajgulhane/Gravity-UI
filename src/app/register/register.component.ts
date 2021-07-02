@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
   display = 'none';
 
   @Input() formType: string;
-  @Output() successEvent = new EventEmitter<{message:string, display:string}>();
+  @Output() successEvent = new EventEmitter<{ message: string, display: string }>();
 
   constructor(
     private service: SharedService,
@@ -60,15 +60,30 @@ export class RegisterComponent implements OnInit {
 
     this.loading = true;
     console.log('After loading');
-    this.service.enrollUser(this.enrollForm.value)
-      .pipe(first())
-      .subscribe(data => {
-        this.message = data.response.toString();
-        this.successMessageFlag = true;
-        this.loading = false;
-        this.successItem(this.message, 'block');
-      }
-      );
+    if (this.formType === 'enroll' || this.formType === 'register' || this.formType === 'contact') {
+      this.service.enrollUser(this.enrollForm.value)
+        .pipe(first())
+        .subscribe(data => {
+          this.message = data.response.toString();
+          this.successMessageFlag = true;
+          this.loading = false;
+          this.successItem(this.message, 'block');
+        }
+        );
+    }
+
+    if (this.formType === 'testimonial') {
+      console.log('form value '+this.enrollForm.value);
+      this.service.submitTestimonials(this.enrollForm.value)
+        .pipe(first())
+        .subscribe(data => {
+          this.message = data.response.toString();
+          this.successMessageFlag = true;
+          this.loading = false;
+          this.successItem(this.message, 'block');
+        }
+        );
+    }
   }
 
   setTextAreaValidators() {
@@ -104,9 +119,8 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  successItem(message: string, display : string) {
-    console.log('Inside successItem');
-    this.successEvent.emit({message, display});
+  successItem(message: string, display: string) {
+    this.successEvent.emit({ message, display });
   }
-  
+
 }

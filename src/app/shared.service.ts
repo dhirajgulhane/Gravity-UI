@@ -35,4 +35,8 @@ export class SharedService {
     console.log('inside service');
     return this.http.get<Testimonial[]>(this.APIUrlJSON + 'feedback.json');
   }
+
+  submitTestimonials(testimonial: Testimonial):Observable<Result>{
+    return this.http.post<Result>(this.APIUrl+'/testimonial', testimonial);
+  }
 }

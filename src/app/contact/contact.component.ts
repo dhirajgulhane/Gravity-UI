@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -8,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 export class ContactComponent implements OnInit {
 
   formType = 'contact';
-  constructor() { }
+  public model = { message: "", display: "none" }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  getResponseMsg(data) {
+    this.model.message = data.message;
+    this.model.display = data.display;
+  }
+
+  onCloseHandled() {
+    this.model.display = 'none';
+    this.router.navigate(['/home']);
   }
 
 }

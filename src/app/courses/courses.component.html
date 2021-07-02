@@ -65,7 +65,7 @@
                     <h4 class="text-center" style="color: black;">JOIN GRAVITY TODAY !</h4>
                 </div>
                 <div>
-                    <app-register [formType]="formType"></app-register>
+                    <app-register (successEvent)="getResponseMsg($event)" [formType]="formType"></app-register>
                 </div>
             </div>
         </div>
@@ -111,3 +111,23 @@
     <a class="btn btn-dark btn-lg" href="https://www.youtube.com/channel/UCXAztXzLrwJs1_Gi9hDtQkA/playlists" 
     target="_blank" role="button">More Videos</a>
 </div>
+
+<!-- Response Modal -->
+<div class="backdrop" [ngStyle]="{'display':model.display}"></div>
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':model.display}">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Thank You</h5>
+                <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <p class="success-m">{{model.message}}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="onCloseHandled()">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal !-->
